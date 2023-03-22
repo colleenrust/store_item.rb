@@ -14,11 +14,11 @@ class Shirt
   def print_info
     p "#{@size} and #{@color} shirt is #{@material} and $#{@price}. "
   end
-#getter
+#getter/reader
   def material
     @material
   end
-#setter
+#setter/writer
   def material(new_material)
     @material = new_material
   end 
