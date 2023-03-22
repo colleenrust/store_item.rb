@@ -14,7 +14,15 @@ class Shirt
   def print_info
     p "#{@size} and #{@color} shirt is #{@material} and $#{@price}. "
   end
-
+#getter
+  def material
+    @material
+  end
+#setter
+  def material(new_material)
+    @material = new_material
+  end 
 end
 shirt1 = Shirt.new("medium","red","cotton",20.00)
+shirt1.material("polyester")
 shirt1.print_info
