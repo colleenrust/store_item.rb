@@ -16,7 +16,16 @@ class Bottoms
   def material(new_material)
     @material = new_material
   end 
+  def size
+    @size
+  end
+  def size(new_size)
+    @size = new_size
+  end
 end
 pants1 = Bottoms.new("x-large","blue","cotton",70.00)
 pants1.material("denim")
 pants1.print_info
+
+pants2 = Bottoms.new("small","black", "leather",95.00)
+pants2.print_info
