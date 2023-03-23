@@ -35,17 +35,25 @@ class Manager < Employee
     puts "Email sent!"
   end
   def give_all_raises
-    :give_annual_raise
+    i = 0
+    while i < @employees.length
+      @employees[i].give_annual_raise
+      i+=1
+    end
     puts "the raises have been stolen and given to the manager"
   end
   def fire_all_employees
-    active = false 
-    puts "the employees have been fired"
+    @employees.each do |employee|
+      employee.active=false 
+    end
   end
 end
 
-manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000, active: true, employees: [employee1, employee2])
-manager.print_info
-manager.send_report
-manager.give_all_raises
-manager.fire_all_employees
+manager1 = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000, active: true, employees: [employee1, employee2])
+manager1.print_info
+manager1.send_report
+p manager1.fire_all_employees
+# manager.fire_all_employees
+
+# employee1.give_annual_raise
+# employee2.give_annual_raise
