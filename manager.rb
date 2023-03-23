@@ -35,10 +35,17 @@ class Manager < Employee
     puts "Email sent!"
   end
   def give_all_raises
-    
+    :give_annual_raise
+    puts "the raises have been stolen and given to the manager"
+  end
+  def fire_all_employees
+    active = false 
+    puts "the employees have been fired"
   end
 end
 
 manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000, active: true, employees: [employee1, employee2])
 manager.print_info
 manager.send_report
+manager.give_all_raises
+manager.fire_all_employees
